@@ -5,11 +5,15 @@
 </head>
 
 <body>
-    <h1>------- Test 1 -------</h1>
+    <h1>------- SSC Demo - 1 -------</h1>
+    <p id="para_1">This will change</p>
+    <br/>
+    <button id="btn_1">Click Me</button>
     <script>
         $(document).ready(function(){
-          alert('XYZ-2');
-          console.log('Check - 1');
+          $('#btn_1').click(function(){
+              $('#para_1').html('Button clicked');
+          });
         });
     </script>
 </body>
