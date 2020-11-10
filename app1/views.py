@@ -4,4 +4,5 @@ from django.http      import HttpResponse
 # Create your views here.
 
 def home_page(request):
-    return render(request, 'app1/home_page.html')
+    dct = {'one': 'ek', 'two': 'do', 'teen': 'teen'}
+    return render(request, 'app1/home_page.html', {'dct': dct})
