@@ -3,6 +3,12 @@ from django.http      import HttpResponse
 
 # Create your views here.
 
+countries = {
+    'USA'     : 'Washington DC', 
+    'Canada'  : 'Ottawa',
+    'England' : 'London',
+    'France'  : 'Paris',
+}
+
 def home_page(request):
-    dct = {'one': 'ek', 'two': 'do', 'teen': 'teen'}
-    return render(request, 'app1/home_page.html', {'dct': dct})
+    return render(request, 'app1/home_page.html', {'countries': countries})
